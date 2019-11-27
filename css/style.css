@@ -1,0 +1,16 @@
+.nav-link{color:#000;font-weight: bold;}
+
+#banner{
+    display:flex;
+    height:300px;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#servico .row div{
+    height: 200px;
+    background-color: rgb(177, 201, 189);
+    color:#fff;
+}
