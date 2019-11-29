@@ -10,7 +10,9 @@
 }
 
 #servico .row div{
-    height: 200px;
-    background-color: rgb(177, 201, 189);
-    color:#fff;
+    height:330px;
+}
+
+#about .row .txt-about{
+  
 }
