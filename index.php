@@ -1,3 +1,22 @@
+<?php
+
+$servicos = [
+  ["imagem"=>"images/desenv-site.jpg", 
+  "titulo"=>"Criar um site", 
+  "descrição"=>"Descrição do serviço 1"],
+
+  ["imagem"=>"images/ecommerce.png",
+  "titulo"=>"Criar uma Loja Virtual",
+  "descrição"=>"Descrição do serviço 2"],
+
+  ["imagem"=>"images/blog.jpg",
+  "titulo"=>"Criar um blog",
+  "descrição"=>"Descrição do serviço 3"]
+];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,42 +62,26 @@
   </section>
   <section id="servico" class="container mt-5">
     <div class="row">
+      <?php foreach($servicos as $servico){ ?>
       <div class="col-4">
         <div class="card">
-          <img src="images/blog.jpg" class="card-img-top" alt="...">
+          <img src="<?php echo $servico['imagem']?>" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Blogs</h5>
-            <p class="card-text">Melhores Blogs.</p>
-            <a href="#" class="btn btn-primary">Contrate agora</a>
+            <h5 class="card-title">
+            <?php echo $servico["titulo"]; ?>
+            </h5>
+            <p class="card-text"><?php echo $servico["descrição"]; ?></p>
+            <a href="#" class="btn btn-primary ">Contrate agora</a>
           </div>
         </div>
       </div>
-      <div class="col-4">
-        <div class="card">
-          <img src="images/desenv-site.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Desenv de Sites</h5>
-            <p class="card-text">Criação de sites com qualidade.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card">
-          <img src="images/ecommerce.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">e-Commerce</h5>
-            <p class="card-text">Venda Online sem dor de cabeça.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
+      <?php } ?>
     </div>
   </section>
 
   <section id="about" class="container mt-5">
     <div class="row">
-
+ 
         <div class="col-6">
             <img src="images/about.svg" class="img-fluid">
         </div>
