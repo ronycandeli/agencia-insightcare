@@ -1,10 +1,10 @@
 <?php
+function cumprimentar($nome = "Ciclano"){
+    return $nome;
+}
 if(isset($_REQUEST["nome"]) && $_REQUEST["nome"] != null){
-    if($_REQUEST["nome"] == "Neiva"){
-        echo "Olá ".$_REQUEST["nome"]."! SEXTOOOOOUUUUUUU!!!!";
-    } else {
-        echo "Olá ".$_REQUEST["nome"];
-    }
+    $nomeInput = $_REQUEST["nome"];
+    echo "Olá ".cumprimentar($nomeInput);
 }
 ?>
 <!DOCTYPE html>
@@ -26,7 +26,7 @@ if(isset($_REQUEST["nome"]) && $_REQUEST["nome"] != null){
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Nome</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" name="nome">
+    <input type="text" placeholder="Fulnano" value="oiejfoiesjf" class="form-control" id="exampleInputPassword1" name="nome">
   </div>
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
